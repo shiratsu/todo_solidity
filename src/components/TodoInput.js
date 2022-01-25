@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 // react-bootstarpのライブラリを使用する
 import { Card, Form, FormControl, InputGroup, Button } from 'react-bootstrap';
 
+// TodoListコンポーネントを読み込む
+import TodoList from './TodoList'; // ここを追加
+
 // TodoInputコンポーネントを定義する
 class TodoInput extends Component {
 
@@ -36,6 +39,8 @@ class TodoInput extends Component {
                         </Form>
                     </Card.Body>
                 </Card>
+                {/* TodoListコンポーネントの呼び出し */}
+                <TodoList task={this.state.task}/>　{/* ここを追加 */}
             </div>
         );
     }
